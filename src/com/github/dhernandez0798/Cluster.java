@@ -4,8 +4,8 @@ import java.util.Arrays;
 
 public class Cluster {
     private final double[] values;
-    private Cluster[] parents = new Cluster[]{null, null};
-    private double distance = 0.0;
+    private Cluster[] parents;
+    private double distance;
     
     public Cluster(double values, Cluster[] parents, double distance) {
         this.values = new double[]{values};

@@ -9,7 +9,7 @@ public class AgglomerativeClustering {
     public static List<Cluster> process(double[] clusters, int clustersAmount, LinkageCriterion linkageCriterion) {
         List<Cluster> tempClusters = new ArrayList<>();
         for (double cluster : clusters) {
-            tempClusters.add(new Cluster(cluster, new Cluster[]{null, null}, 0));
+            tempClusters.add(new Cluster(cluster, null, 0));
         }
         return process(tempClusters, clustersAmount, linkageCriterion);
     }
