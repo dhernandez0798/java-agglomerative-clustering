@@ -6,7 +6,7 @@ import java.util.List;
 public class AgglomerativeClustering {
 
     // We transform a simple array to a list here.
-    public static List<Cluster> proccess(double[] clusters, int clustersAmount, LinkageCriterion linkageCriterion) {
+    public static List<Cluster> process(double[] clusters, int clustersAmount, LinkageCriterion linkageCriterion) {
         List<Cluster> tempClusters = new ArrayList<>();
         for (double cluster : clusters) {
             tempClusters.add(new Cluster(cluster, new Cluster[]{null, null}, 0));
