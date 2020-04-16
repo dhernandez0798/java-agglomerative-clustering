@@ -1,8 +1,14 @@
 package com.github.dhernandez0798;
 
 public class SingleLinkageCriterion implements LinkageCriterion {
+    private DistanceFunction distanceFunction = null;
+
+    public SingleLinkageCriterion(DistanceFunction distanceFunction) {
+        this.distanceFunction = distanceFunction;
+    }
+
     @Override
-    public double calculate(DistanceFunction distanceFunction, Cluster c1, Cluster c2) {
+    public double calculate(Cluster c1, Cluster c2) {
         double[] cluster1Values = c1.getValues();
         double[] cluster2Values = c2.getValues();
         double distance = Double.POSITIVE_INFINITY;
